@@ -273,7 +273,8 @@
     .logo-banner img {
       max-width: 240px;
       height: auto;
-      display: inline-block;
+      display: block;
+      margin: 0 auto;
     }
 
     @media (max-width: 600px) {
@@ -396,7 +397,7 @@
     /* Florida outline icon: uses Graham's PNG as a mask so we can color it with the brand gold. */
     .fl-outline {
       display: inline-block;
-      background-color: var(--accent-gold);
+      background-color: white;
       -webkit-mask: url('florida-outline.png') center / contain no-repeat;
               mask: url('florida-outline.png') center / contain no-repeat;
     }
@@ -412,7 +413,7 @@
     }
 
     .hero h1 .highlight {
-      color: var(--accent-gold);
+      color: #A6C4DD; /* light blue accent for "Florida" against the navy hero */
     }
 
     @media (max-width: 768px) {
@@ -1301,6 +1302,11 @@
       color: var(--mist-gray);
     }
 
+    .process-cta {
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
     .process-time {
       display: inline-block;
       margin-top: 0.75rem;
@@ -1869,7 +1875,7 @@
           <span class="fl-outline" aria-hidden="true"></span>
           Servicing Clients Statewide
         </div>
-        <h1>Insurance Coverage Across Florida</h1>
+        <h1>Insurance Coverage Across <span class="highlight">Florida</span></h1>
         <p class="hero-sub">Fast, simple coverage for business, personal, and specialty insurance.</p>
         <div class="hero-ctas">
           <a href="tel:754-272-8705" class="btn-primary">
@@ -2188,15 +2194,8 @@
           <span class="process-time">Same-day coverage available</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Mid-page CTA: between How It Works and FAQ -->
-  <section class="cta-section cta-mid">
-    <div class="container">
-      <h2>Ready When You Are</h2>
-      <p>Start your free quote or call us directly. Same-day coverage available.</p>
-      <div class="cta-buttons">
+      <div class="cta-buttons process-cta">
         <a href="#quote-form" class="btn-primary">
           Free Quote
         </a>
