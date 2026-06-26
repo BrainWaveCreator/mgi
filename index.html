@@ -158,12 +158,12 @@
     }
 
     .consent-btn-accept {
-      background: var(--accent-gold);
-      color: var(--deep-current);
+      background: var(--deep-current);
+      color: white;
     }
 
     .consent-btn-accept:hover {
-      background: #c79a48;
+      background: var(--steel-blue);
     }
 
     .consent-btn-decline {
@@ -236,10 +236,10 @@
       align-items: center;
       box-shadow: 0 2px 20px rgba(24, 47, 87, 0.3);
       background-image:
-        linear-gradient(90deg, rgba(24,47,87,0.92) 0%, rgba(24,47,87,0.60) 60%, rgba(24,47,87,0.30) 100%),
+        linear-gradient(90deg, rgba(24,47,87,0.30) 0%, rgba(24,47,87,0.55) 45%, rgba(24,47,87,0.88) 100%),
         url('mgi-coastal.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center 30%;
     }
 
     .nav-links {
@@ -507,8 +507,8 @@
     }
 
     .btn-text {
-      background: var(--accent-gold);
-      color: var(--deep-current);
+      background: var(--steel-blue);
+      color: white;
       padding: 1rem 1.75rem;
       border-radius: 6px;
       text-decoration: none;
@@ -521,9 +521,9 @@
     }
 
     .btn-text:hover {
-      background: #c0973f;
+      background: var(--deep-current);
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(212,168,83,0.35);
+      box-shadow: 0 8px 25px rgba(24, 47, 87, 0.35);
     }
 
     .hero-trust {
@@ -1063,7 +1063,7 @@
       text-align: center;
       margin: -1rem auto 2.5rem;
       font-size: 0.9rem;
-      color: var(--accent-gold);
+      color: var(--sky-slate);
       font-weight: 600;
       letter-spacing: 0.02em;
       max-width: 700px;
@@ -1305,9 +1305,9 @@
       display: inline-block;
       margin-top: 0.75rem;
       padding: 0.25rem 0.75rem;
-      background: rgba(212, 168, 83, 0.15);
-      border: 1px solid rgba(212, 168, 83, 0.4);
-      color: var(--accent-gold);
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.45);
+      color: #1fa856;
       border-radius: 50px;
       font-size: 0.75rem;
       font-weight: 600;
@@ -1857,28 +1857,9 @@
 
   <!-- Logo banner (full-color logo on white, between nav and hero per client direction) -->
   <section class="logo-banner" aria-label="Mutual Grid Insurance Group">
-    <img src="logo-email.png" alt="Mutual Grid Insurance Group">
+    <img src="Horizontal_FullColor.png" alt="Mutual Grid Insurance Group">
   </section>
 
-  <!-- Quick Quote Section (above hero per client direction) -->
-  <section class="quick-quote-section quick-quote-top">
-    <div class="quick-quote-buttons">
-      <a href="https://app.nextinsurance.com/quote/get-started?agent_affiliation=I1vWXSoDVZQoO5jd&serial=992855993&channel=affiliation&prev_tracking_id=bd902d6cbaba8c8b44f34f6580e958e2&tracking_id=b6af5a8e872304ef62dba571555ec626" class="quick-quote-btn" target="_blank">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-        </svg>
-        Small Business Quote
-      </a>
-      <a href="https://www.epremiuminsurance.com/DirectToConsumerPartner.aspx?IRISAccountID=X2wl15QUS1g%3d&TopLevelIRISAccountID=pKgVh2ygOEw%3d" class="quick-quote-btn secondary" target="_blank">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 11l9-8 9 8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Renters Quote
-      </a>
-    </div>
-  </section>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -2206,6 +2187,25 @@
           <p>Choose your option and receive your policy and documents.</p>
           <span class="process-time">Same-day coverage available</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mid-page CTA: between How It Works and FAQ -->
+  <section class="cta-section cta-mid">
+    <div class="container">
+      <h2>Ready When You Are</h2>
+      <p>Start your free quote or call us directly. Same-day coverage available.</p>
+      <div class="cta-buttons">
+        <a href="#quote-form" class="btn-primary">
+          Free Quote
+        </a>
+        <a href="tel:754-272-8705" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call Now
+        </a>
       </div>
     </div>
   </section>
