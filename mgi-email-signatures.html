@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mutual Grid — Email Signatures</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f5f6;
+      color: #182F57;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      line-height: 1.5;
+    }
+    h1 { font-size: 1.6rem; margin: 0 0 0.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.5rem 0 0.75rem; color: #182F57; }
+    h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: #47597D; }
+    .lead { color: #47597D; margin-bottom: 2rem; }
+    .panel {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .preview { padding: 1.5rem; background: #fafafa; border-radius: 6px; }
+    .actions { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #182F57;
+      background: white;
+      color: #182F57;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-primary { background: #182F57; color: white; }
+    .btn:hover { opacity: 0.85; }
+    pre {
+      background: #182F57;
+      color: #a8c4de;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+    details { margin-top: 1rem; }
+    summary { cursor: pointer; font-weight: 600; color: #47597D; }
+    .install ol { padding-left: 1.25rem; }
+    .install li { margin-bottom: 0.5rem; }
+    .badge {
+      display: inline-block;
+      background: #47597D;
+      color: white;
+      padding: 0.15rem 0.6rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-left: 0.5rem;
+    }
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #182F57;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .notes {
+      background: #eef4fa;
+      border-left: 4px solid #47597D;
+      padding: 1rem 1.25rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+    .notes strong { color: #182F57; }
+  </style>
+</head>
+<body>
+  <h1>Mutual Grid — Email Signatures</h1>
+  <p class="lead">Four signatures below matching the new website's look and feel. Each is a self-contained HTML block (table-based, inline styles only) that pastes cleanly into Gmail, Apple Mail, Outlook desktop, and Outlook web.</p>
+
+  <div class="notes">
+    <strong>How images work:</strong>
+    <ul style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Logo loads from: <code>https://www.mutualgridinsurance.com/Horizontal_FullColor_tm.png</code></li>
+      <li>Steven's headshot: <code>https://www.mutualgridinsurance.com/steven-headshot.jpg</code></li>
+      <li>Graham's headshot: <code>https://www.mutualgridinsurance.com/graham-headshot.jpg</code></li>
+      <li>Both headshot files need to be uploaded to your GitHub repo before signatures display properly for recipients.</li>
+    </ul>
+  </div>
+
+  <!-- Steven -->
+  <h2>1. Steven G. Lewis Jr. <span class="badge">Agent in Charge</span></h2>
+  <div class="panel">
+    <h3>Preview</h3>
+    <div class="preview" id="preview-steven"></div>
+    <div class="actions">
+      <button class="btn btn-primary" data-copy-rendered="preview-steven">Copy rendered (for Gmail / Apple Mail / Outlook Web)</button>
+      <button class="btn" data-copy="sig-steven">Copy HTML source</button>
+    </div>
+    <details>
+      <summary>View HTML source</summary>
+      <pre id="sig-steven"></pre>
+    </details>
+  </div>
+
+  <!-- Graham -->
+  <h2>2. Graham Morrison <span class="badge">Chief Operating Officer</span></h2>
+  <div class="panel">
+    <h3>Preview</h3>
+    <div class="preview" id="preview-graham"></div>
+    <div class="actions">
+      <button class="btn btn-primary" data-copy-rendered="preview-graham">Copy rendered (for Gmail / Apple Mail / Outlook Web)</button>
+      <button class="btn" data-copy="sig-graham">Copy HTML source</button>
+    </div>
+    <details>
+      <summary>View HTML source</summary>
+      <pre id="sig-graham"></pre>
+    </details>
+  </div>
+
+  <!-- Agency -->
+  <h2>3. Mutual Grid Insurance Group <span class="badge">Agency</span></h2>
+  <div class="panel">
+    <h3>Preview</h3>
+    <div class="preview" id="preview-agency"></div>
+    <div class="actions">
+      <button class="btn btn-primary" data-copy-rendered="preview-agency">Copy rendered (for Gmail / Apple Mail / Outlook Web)</button>
+      <button class="btn" data-copy="sig-agency">Copy HTML source</button>
+    </div>
+    <details>
+      <summary>View HTML source</summary>
+      <pre id="sig-agency"></pre>
+    </details>
+  </div>
+
+  <!-- Quotes Team -->
+  <h2>4. The Quotes Team <span class="badge">Team</span></h2>
+  <div class="panel">
+    <h3>Preview</h3>
+    <div class="preview" id="preview-quotes"></div>
+    <div class="actions">
+      <button class="btn btn-primary" data-copy-rendered="preview-quotes">Copy rendered (for Gmail / Apple Mail / Outlook Web)</button>
+      <button class="btn" data-copy="sig-quotes">Copy HTML source</button>
+    </div>
+    <details>
+      <summary>View HTML source</summary>
+      <pre id="sig-quotes"></pre>
+    </details>
+  </div>
+
+  <!-- Install instructions -->
+  <h2>Install Instructions</h2>
+  <div class="panel install">
+    <h3>Gmail (web)</h3>
+    <ol>
+      <li>Click <em>Copy rendered</em> above for the signature you want.</li>
+      <li>In Gmail, click the gear icon → <em>See all settings</em>.</li>
+      <li>Scroll to <em>Signature</em> → <em>Create new</em>, give it a name.</li>
+      <li>Click into the editor and paste (⌘V / Ctrl+V). The image and links come through.</li>
+      <li>Set the signature as default for new mail and replies. Save.</li>
+    </ol>
+
+    <h3>Apple Mail</h3>
+    <ol>
+      <li>In Apple Mail, go to <em>Settings → Signatures</em>.</li>
+      <li>Pick the account, click <em>+</em> to add a new signature.</li>
+      <li>Click <em>Copy rendered</em> above and paste into the signature editor.</li>
+      <li>Uncheck <em>"Always match my default message font"</em> at the bottom of the Signatures pane so the styles stick.</li>
+    </ol>
+
+    <h3>Outlook (Web)</h3>
+    <ol>
+      <li>Click the gear icon (top right) → <em>View all Outlook settings</em>.</li>
+      <li>Mail → Compose and reply → Signatures → <em>+ New signature</em>.</li>
+      <li>Paste the rendered version. Set as default for new messages and replies.</li>
+    </ol>
+
+    <h3>Outlook (Desktop)</h3>
+    <ol>
+      <li>Outlook strips some inline CSS. Best path: paste the <em>rendered</em> version into <em>Outlook → Preferences → Signatures</em>.</li>
+      <li>If formatting drops, use the <em>Copy HTML</em> button and try again.</li>
+    </ol>
+
+    <h3>Notes</h3>
+    <ul>
+      <li>The "Get a Quote" button is a styled link, not a real button — works in every email client.</li>
+      <li>Phone, email, website, and address are all clickable (<code>tel:</code>, <code>mailto:</code>, <code>https://</code>, and address opens in Maps).</li>
+      <li>If any image fails to load (email client blocks external images), the signature still reads well as text.</li>
+    </ul>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <!-- Template for signatures with a headshot (Steven, Graham) -->
+  <template id="tpl-person">
+    <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; color: #182F57; font-size: 13px; line-height: 1.45; border-collapse: collapse;">
+      <tr>
+        <td style="padding-right: 20px; vertical-align: top; width: 100px;">
+          <img src="__HEADSHOT__" alt="__NAME__" width="90" height="90" style="display: block; border-radius: 50%; border: 3px solid #182F57; width: 90px; height: 90px; object-fit: cover;">
+        </td>
+        <td style="vertical-align: top; padding-left: 4px;">
+          <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 17px; font-weight: 700; color: #182F57; letter-spacing: -0.01em;">__NAME__</div>
+          <div style="font-size: 12px; color: #47597D; margin-top: 2px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">__TITLE__</div>
+          <div style="margin-top: 8px;">
+            <a href="https://www.mutualgridinsurance.com" style="text-decoration: none;">
+              <img src="https://www.mutualgridinsurance.com/Horizontal_FullColor_tm.png" alt="Mutual Grid Insurance Group" width="150" style="display: block; border: 0; outline: none; max-width: 150px; height: auto;">
+            </a>
+          </div>
+          <div style="font-size: 11px; color: #6782A0; margin-top: 4px; font-style: italic; letter-spacing: 0.02em;">Coverage that Fits. Quotes that Click.</div>
+          <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #182F57; line-height: 1.6;">
+            __CONTACT_ROWS__
+          </table>
+          <div style="margin-top: 8px; font-size: 10px; color: #6782A0; letter-spacing: 0.04em; text-transform: uppercase;">__LICENSE__</div>
+          <div style="margin-top: 12px;">
+            <a href="https://www.mutualgridinsurance.com/#quote-form" style="display: inline-block; background: #182F57; color: white; font-weight: 700; font-size: 11px; padding: 7px 14px; border-radius: 5px; text-decoration: none; letter-spacing: 0.03em; text-transform: uppercase;">Get a Quote &rarr;</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </template>
+
+  <!-- Template for logo-only signatures (Agency, Quotes Team) -->
+  <template id="tpl-brand">
+    <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; color: #182F57; font-size: 13px; line-height: 1.45; border-collapse: collapse;">
+      <tr>
+        <td style="padding-right: 22px; vertical-align: top; width: 170px; border-right: 2px solid #47597D;">
+          <a href="https://www.mutualgridinsurance.com" style="text-decoration: none;">
+            <img src="https://www.mutualgridinsurance.com/Horizontal_FullColor_tm.png" alt="Mutual Grid Insurance Group" width="150" style="display: block; border: 0; outline: none; max-width: 150px; height: auto;">
+          </a>
+          <div style="font-size: 11px; color: #6782A0; margin-top: 8px; font-style: italic; letter-spacing: 0.02em;">Coverage that Fits.<br>Quotes that Click.</div>
+        </td>
+        <td style="vertical-align: top; padding-left: 22px;">
+          <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: 700; color: #182F57; letter-spacing: -0.01em;">__NAME__</div>
+          <div style="font-size: 12px; color: #47597D; margin-top: 2px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">__TITLE__</div>
+          <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #182F57; line-height: 1.6;">
+            __CONTACT_ROWS__
+          </table>
+          <div style="margin-top: 8px; font-size: 10px; color: #6782A0; letter-spacing: 0.04em; text-transform: uppercase;">Agency #: L129711 (2105 License)</div>
+          <div style="margin-top: 12px;">
+            <a href="https://www.mutualgridinsurance.com/#quote-form" style="display: inline-block; background: #182F57; color: white; font-weight: 700; font-size: 11px; padding: 7px 14px; border-radius: 5px; text-decoration: none; letter-spacing: 0.03em; text-transform: uppercase;">Get a Quote &rarr;</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </template>
+
+  <script>
+    var personTpl = document.getElementById('tpl-person').innerHTML;
+    var brandTpl = document.getElementById('tpl-brand').innerHTML;
+
+    // Contact row builder: [label, value, href]
+    function contactRow(icon, value, href) {
+      var linkOpen = href ? '<a href="' + href + '" style="color: #182F57; text-decoration: none;">' : '';
+      var linkClose = href ? '</a>' : '';
+      return '<tr><td style="padding-right: 8px; color: #47597D; font-weight: 700; white-space: nowrap;">' + icon + '</td>' +
+             '<td>' + linkOpen + value + linkClose + '</td></tr>';
+    }
+
+    function build(tpl, vars) {
+      return tpl
+        .replace(/__NAME__/g, vars.name)
+        .replace(/__TITLE__/g, vars.title)
+        .replace(/__HEADSHOT__/g, vars.headshot || '')
+        .replace(/__LICENSE__/g, vars.license || '')
+        .replace(/__CONTACT_ROWS__/g, vars.contactRows);
+    }
+
+    // Steven — Agent in Charge
+    var stevenHtml = build(personTpl, {
+      name: 'Steven G. Lewis Jr.',
+      title: 'Agent in Charge (AIC)',
+      headshot: 'https://www.mutualgridinsurance.com/steven-headshot.jpg',
+      license: 'License #: W890667 (0220) &nbsp;&middot;&nbsp; Agency #: L129711 (2105)',
+      contactRows:
+        contactRow('P', '(754) 272-8705 <span style="color: #6782A0; font-weight: 400;">| Call &middot; Text</span>', 'tel:7542728705') +
+        contactRow('E', 'steven@mutualgridinsgroup.com', 'mailto:steven@mutualgridinsgroup.com') +
+        contactRow('W', 'www.mutualgridinsurance.com', 'https://www.mutualgridinsurance.com') +
+        contactRow('A', '3150 SW 145th Ave #401, Miramar, FL 33027', 'https://maps.google.com/?q=3150+SW+145th+Ave+%23401+Miramar+FL+33027')
+    });
+
+    // Graham — Chief Operating Officer
+    var grahamHtml = build(personTpl, {
+      name: 'Graham Morrison',
+      title: 'Chief Operating Officer',
+      headshot: 'https://www.mutualgridinsurance.com/graham-headshot.jpg',
+      license: 'Agency #: L129711 (2105 License)',
+      contactRows:
+        contactRow('O', '(754) 272-8705 <span style="color: #6782A0; font-weight: 400;">Office</span>', 'tel:7542728705') +
+        contactRow('C', '(954) 806-7187 <span style="color: #6782A0; font-weight: 400;">Cell</span>', 'tel:9548067187') +
+        contactRow('E', 'graham@mutualgridinsgroup.com', 'mailto:graham@mutualgridinsgroup.com') +
+        contactRow('W', 'www.mutualgridinsurance.com', 'https://www.mutualgridinsurance.com') +
+        contactRow('A', '3150 SW 145th Ave #401, Miramar, FL 33027', 'https://maps.google.com/?q=3150+SW+145th+Ave+%23401+Miramar+FL+33027')
+    });
+
+    // Agency
+    var agencyHtml = build(brandTpl, {
+      name: 'Mutual Grid Insurance Group',
+      title: 'Agency',
+      contactRows:
+        contactRow('O', '(754) 272-8705 <span style="color: #6782A0; font-weight: 400;">Office</span>', 'tel:7542728705') +
+        contactRow('E', 'agency@mutualgridinsgroup.com', 'mailto:agency@mutualgridinsgroup.com') +
+        contactRow('W', 'www.mutualgridinsurance.com', 'https://www.mutualgridinsurance.com') +
+        contactRow('A', '3150 SW 145th Ave #401, Miramar, FL 33027', 'https://maps.google.com/?q=3150+SW+145th+Ave+%23401+Miramar+FL+33027')
+    });
+
+    // Quotes Team
+    var quotesHtml = build(brandTpl, {
+      name: 'The Quotes Team',
+      title: 'Mutual Grid Insurance Group',
+      contactRows:
+        contactRow('O', '(754) 272-8705 <span style="color: #6782A0; font-weight: 400;">Office</span>', 'tel:7542728705') +
+        contactRow('E', 'quotes@mutualgridinsgroup.com', 'mailto:quotes@mutualgridinsgroup.com') +
+        contactRow('W', 'www.mutualgridinsurance.com', 'https://www.mutualgridinsurance.com') +
+        contactRow('A', '3150 SW 145th Ave #401, Miramar, FL 33027', 'https://maps.google.com/?q=3150+SW+145th+Ave+%23401+Miramar+FL+33027')
+    });
+
+    document.getElementById('preview-steven').innerHTML = stevenHtml;
+    document.getElementById('preview-graham').innerHTML = grahamHtml;
+    document.getElementById('preview-agency').innerHTML = agencyHtml;
+    document.getElementById('preview-quotes').innerHTML = quotesHtml;
+
+    function prettyHtml(html) {
+      return html.replace(/></g, '>\n<').replace(/^\s+|\s+$/g, '');
+    }
+    document.getElementById('sig-steven').textContent = prettyHtml(stevenHtml);
+    document.getElementById('sig-graham').textContent = prettyHtml(grahamHtml);
+    document.getElementById('sig-agency').textContent = prettyHtml(agencyHtml);
+    document.getElementById('sig-quotes').textContent = prettyHtml(quotesHtml);
+
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function () { t.classList.remove('show'); }, 1800);
+    }
+
+    document.querySelectorAll('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-copy');
+        navigator.clipboard.writeText(document.getElementById(id).textContent).then(function () {
+          showToast('HTML source copied');
+        });
+      });
+    });
+
+    document.querySelectorAll('[data-copy-rendered]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-copy-rendered');
+        var node = document.getElementById(id);
+        var range = document.createRange();
+        range.selectNodeContents(node);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        try {
+          document.execCommand('copy');
+          showToast('Rendered signature copied — paste into your email signature editor');
+        } catch (e) {
+          showToast('Copy failed — try selecting manually');
+        }
+        sel.removeAllRanges();
+      });
+    });
+  </script>
+</body>
+</html>
